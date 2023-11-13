@@ -24,7 +24,8 @@ function handleCellPlayed (clickedCell, clickedCellIndex) {
 }
 
 function handlePlayerChange() {
-
+    currentPlayer = currentPlayer === "X" ? "O" : "X";
+    statusDisplay.innerHTML = currentPlayerTurn();
 }
 
 function handleResultValidation() {
@@ -47,7 +48,13 @@ function handleResultValidation() {
         gameActive = false;
         return;
     }
-    
+    let roundDraw = !gameState.includes("");
+    if roundDraw {
+        statusDisplay.innerHTML = drawMessage();
+        gameActive = false;
+        return;
+    }
+    handlePlayerChange();
 }
 
 function handleCellClick(clickedCellEvent) {
