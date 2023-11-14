@@ -4,5 +4,5 @@
 
 
 <p> I coded this simple game as a way to test my skills in coding JavaScript, HTML, and CSS.</p>
-<p>I utilzed the Project-Based learning GitHub as a source of insparation for the code.</p>
+<p>I utilzed the Project-Based learning GitHub and the javascript.plainenglish.io resource as a source of insparation for the code.</p>
 
