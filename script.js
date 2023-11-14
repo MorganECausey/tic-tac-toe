@@ -2,7 +2,7 @@ const statusDisplay = document.querySelector('.game-status');
 let gameActive = true;
 let currentPlayer = "X";
 let gameState = ["", "", "", "", "", "", "", "",""];
-const winningMessage = () => 'Player ${currentPlayer} has won!';
+const winningMessage = () => `Player ${currentPlayer} has won!`;
 const drawMessage = () => 'Game ended in a draw!';
 const currentPlayerTurn = () => `it's ${currentPlayer}'s turn`;
 const winningConditions = [
@@ -60,7 +60,7 @@ function handleResultValidation() {
 function handleCellClick(clickedCellEvent) {
     const clickedCell = clickedCellEvent.target;
     const clickedCellIndex= parseInt(clickedCell.getAttribute('data-cell-index'));
-    if (gameState[clickedCellIndex] !== gameActive) {
+    if (gameState[clickedCellIndex] !== "") {
         return;
     }
     handleCellPlayed(clickedCell, clickedCellIndex);

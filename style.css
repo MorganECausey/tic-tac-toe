@@ -2,8 +2,8 @@ body {
     font-family: "Arial", sans-serif;
     background-image: url(https://images.unsplash.com/photo-1533628635777-112b2239b1c7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
 }
-.title {
-    font-size: 4000px;
+.game-title {
+    font-size: 40px;
     color: #333333;
     text-shadow: 2px 2px 2px #cccccc;
 }
