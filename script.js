@@ -49,7 +49,7 @@ function handleResultValidation() {
         return;
     }
     let roundDraw = !gameState.includes("");
-    if roundDraw {
+    if (roundDraw) {
         statusDisplay.innerHTML = drawMessage();
         gameActive = false;
         return;
@@ -68,7 +68,12 @@ function handleCellClick(clickedCellEvent) {
 }
 
 function handleGameRestart() {
-
+    gameActive = true;
+    currentPlayer = "X";
+    gameState = ["", "", "", "", "", "", "", "", ""];
+    statusDisplay.innerHTML = currentPlayerTurn();
+    document.querySelectorAll('.cell')
+        .forEach(cell => cell.innerHTML = "");
 }
 document.querySelectorAll('.cell').forEach(cell =>
     cell.addEventListener('click', handleCellClick));
